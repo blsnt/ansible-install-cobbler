@@ -1,0 +1,2 @@
+- name: add ks
+  shell: cobbler profile add --name=centos7.4-custom --kickstart=/var/lib/cobbler/kickstarts/centos7.ks --distro=centos7.4-x86_64 --kopts="net.ifnames=0 biosdevname=0" || exit 0

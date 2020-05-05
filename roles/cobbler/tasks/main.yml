@@ -1,0 +1,7 @@
+- include: yum.yml
+- include: change_config.yml
+- include: copy.yml
+- include: service.yml
+- include: mount.yml
+- include: repo.yml
+- include: add_ks.yml

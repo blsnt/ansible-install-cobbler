@@ -1,0 +1,21 @@
+- name: Modify configuration server
+  lineinfile:
+    dest: /etc/cobbler/settings 
+    regexp: '^server:'
+    line: 'server: {{ cobbler_server }}' 
+- name: Modify configuration next_server
+  lineinfile:
+    dest: /etc/cobbler/settings
+    regexp: '^next_server:'
+    line: 'next_server: {{ cobbler_server }}'
+- name: Modify configuration manage_dhcp
+  lineinfile:
+    dest: /etc/cobbler/settings
+    regexp: '^manage_dhcp:'
+    line: 'manage_dhcp: 1'
+- name: Modify configuration default_root_password
+  lineinfile:
+    dest: /etc/cobbler/settings
+    regexp: '^default_password_crypted:'
+    line: 'default_password_crypted: {{ root_password }}'
+

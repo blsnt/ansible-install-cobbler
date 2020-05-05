@@ -1,0 +1,5 @@
+cobbler_server: '192.168.83.4'
+root_password: '$1$f4ncAXLg$PRtFpwb.GR0jOjLq.4UcN.'
+ip_pool: '192.168.83.0'
+ip_start: '192.168.83.100'
+ip_end: '192.168.83.200'

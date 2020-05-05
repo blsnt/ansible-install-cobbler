@@ -1,0 +1,4 @@
+- name: copy dhcp file
+  template: src=dhcp.j2 dest=/etc/cobbler/dhcp.template
+- name: copy ks file
+  template: src=centos7.j2 dest=/var/lib/cobbler/kickstarts/centos7.ks

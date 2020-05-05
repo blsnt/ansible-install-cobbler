@@ -1,0 +1,6 @@
+- name: create repo dir
+  file: path=/var/www/cobbler/repo state=directory mode=0755
+- name: copy CentOS-Base.repo
+  copy: src=repo/CentOS-Base.repo dest=/var/www/cobbler/repo
+- name: copy epel.repo
+  copy: src=repo/epel.repo dest=/var/www/cobbler/repo

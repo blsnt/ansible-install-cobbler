@@ -1,0 +1,6 @@
+- name: install cobbler
+  yum: name=cobbler
+- name: install dhcp
+  yum: name=dhcp
+- name: install cobbler-web
+  yum: name=cobbler-web

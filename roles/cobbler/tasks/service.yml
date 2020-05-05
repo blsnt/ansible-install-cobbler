@@ -1,0 +1,10 @@
+- name: start cobblerd & Auto boot
+  service: name=cobblerd state=started enabled=yes
+- name: start tftp & Auto boot
+  service: name=tftp state=started enabled=yes
+- name: start httpd & Auto boot
+  service: name=httpd state=started enabled=yes
+- name: cobbler sync
+  shell: cobbler sync
+- name: start dhcpd & Auto boot
+  service: name=dhcpd state=started enabled=yes

@@ -1,0 +1,6 @@
+- name: create dir
+  file: path=/opt/centos7 state=directory
+- name: mount centos7 iso
+  mount: name=/opt/centos7 src=/root/ansible-install-cobbler/roles/cobbler/files/centos7/CentOS-7-x86_64-DVD-1708.iso fstype=iso9660 opts=ro state=mounted
+- name: cobbler import centos7
+  shell: cobbler import --path=/opt/centos7 --name=centos7.4 || exit 0 
